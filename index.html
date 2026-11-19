@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#075b3b">
+<title>PRIYAM IMAGE TOOLS — Free Online Image & PDF Tools</title>
+<style>
+:root{--green:#087447;--dark:#064b34;--ink:#172b23;--muted:#65756d;--bg:#f4f7f5;--line:#dfe8e2;--white:#fff;--shadow:0 8px 28px #153b2910}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Arial,Helvetica,sans-serif}
+header{background:linear-gradient(120deg,#064b34,#0b8050);color:#fff;padding:22px max(18px,calc((100% - 1160px)/2));}
+.top{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}.brand{font-size:22px;font-weight:800;letter-spacing:.3px}.brand span{color:#b9f3d3}.tag{font-size:12px;color:#d7f4e5}
+main{max-width:1160px;margin:26px auto;padding:0 18px}.hero{text-align:center;margin:20px auto 28px;max-width:720px}.hero h1{font-size:clamp(27px,5vw,42px);line-height:1.12;margin:0 0 10px}.hero p{color:var(--muted);margin:0}
+.layout{display:grid;grid-template-columns:245px 1fr;gap:20px;align-items:start}
+nav,.workspace,.tool-card{background:var(--white);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}
+nav{padding:12px;position:sticky;top:12px}.nav-title{font-size:11px;color:var(--muted);font-weight:bold;letter-spacing:1px;padding:10px 10px 5px}.navbtn{width:100%;border:0;background:transparent;text-align:left;padding:11px 12px;border-radius:10px;color:#31483c;cursor:pointer;font-size:14px}.navbtn:hover,.navbtn.active{background:#e8f5ed;color:var(--dark);font-weight:bold}
+.workspace{padding:24px;min-height:560px}.workspace h2{margin:0 0 5px;font-size:24px}.sub{color:var(--muted);margin:0 0 20px}.drop{border:2px dashed #a9cdb8;background:#f7fcf8;border-radius:14px;padding:28px 16px;text-align:center;cursor:pointer}.drop.drag{background:#e8f7ed;border-color:var(--green)}.drop strong{display:block;font-size:17px}.drop small{color:var(--muted)}input,select,button{font:inherit}input[type=file]{display:none}.controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:18px 0}.field{display:flex;flex-direction:column;gap:6px}.field label{font-size:13px;font-weight:bold;color:#42564b}.field input:not([type=file]),.field select{width:100%;border:1px solid #cfdcd3;border-radius:9px;padding:10px;background:#fff;color:var(--ink)}.field input[type=range]{padding:0}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.btn{border:0;border-radius:10px;padding:11px 17px;background:var(--green);color:#fff;font-weight:bold;cursor:pointer}.btn:hover{background:var(--dark)}.btn.secondary{background:#e8f1eb;color:var(--dark)}.btn:disabled{opacity:.45;cursor:not-allowed}.preview{margin-top:18px;display:flex;justify-content:center;align-items:center;min-height:130px;background:#f8faf8;border:1px solid var(--line);border-radius:12px;padding:12px;overflow:hidden}.preview img{max-width:100%;max-height:390px;object-fit:contain}.status{margin-top:12px;color:var(--muted);font-size:13px;white-space:pre-wrap}.hidden{display:none!important}.note{background:#fff8e8;border:1px solid #f1dfb2;border-radius:10px;padding:12px;font-size:13px;color:#67532a;margin-top:16px}
+canvas{max-width:100%;touch-action:none;cursor:crosshair}.cropwrap{position:relative;display:inline-block;max-width:100%;line-height:0}.cropwrap canvas{display:block}.cropbox{position:absolute;border:2px dashed #00a85a;background:#00a85a22;pointer-events:none}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}.tile{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}.tile b{display:block;margin-bottom:4px}.tile span{font-size:12px;color:var(--muted)}
+footer{text-align:center;padding:28px;color:var(--muted);font-size:12px}
+@media(max-width:760px){.layout{grid-template-columns:1fr}nav{position:static;display:grid;grid-template-columns:repeat(2,1fr);gap:3px}.nav-title{grid-column:1/-1}.workspace{padding:18px}.tiles{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:430px){.controls{grid-template-columns:1fr}.tiles{grid-template-columns:1fr}.brand{font-size:19px}}
+</style>
+</head>
+<body>
+<header><div class="top"><div class="brand">PRIYAM <span>IMAGE TOOLS</span></div><div class="tag">FREE • PRIVATE • BROWSER-BASED</div></div></header>
+<main>
+<section class="hero"><h1>All your image tools in one place</h1><p>Compress, resize, crop and convert images directly in your browser. Your files stay on your device.</p></section>
+<div class="layout">
+<nav aria-label="Tools">
+<div class="nav-title">IMAGE TOOLS</div>
+<button class="navbtn active" data-tool="compress">🗜️ Image Compressor</button>
+<button class="navbtn" data-tool="resize">↔️ Image Resizer</button>
+<button class="navbtn" data-tool="crop">✂️ Image Cropper</button>
+<button class="navbtn" data-tool="convert">🔄 Image Converter</button>
+<button class="navbtn" data-tool="passport">🪪 Passport Photo</button>
+<button class="navbtn" data-tool="signature">✍️ Signature Resizer</button>
+<button class="navbtn" data-tool="rotate">⤾ Rotate & Flip</button>
+<div class="nav-title">PDF TOOLS</div>
+<button class="navbtn" data-tool="imgpdf">📄 Images to PDF</button>
+<button class="navbtn" data-tool="pdfimg">🖼️ PDF to Images</button>
+</nav>
+<section class="workspace">
+<div id="toolhead"><h2>Image Compressor</h2><p class="sub">Reduce image file size while keeping the best possible quality.</p></div>
+<div class="drop" id="drop"><strong>Drop an image here or click to browse</strong><small>JPG, PNG, WEBP supported • processed on your device</small><input id="file" type="file" accept="image/*,.pdf"></div>
+<div id="controls" class="controls"></div>
+<div id="preview" class="preview"><span style="color:#87958d">Your preview will appear here</span></div>
+<div class="actions"><button class="btn" id="process" disabled>Process image</button><button class="btn secondary" id="download" disabled>Download result</button><button class="btn secondary" id="reset">Reset</button></div>
+<div class="status" id="status">Choose a tool and upload a file to get started.</div>
+<div class="note">Privacy: image processing happens locally in your browser. Files are not sent to PRIYAM IMAGE TOOLS. PDF tools load free open-source libraries from a CDN when used.</div>
+</section>
+</div>
+<div class="tiles">
+<div class="tile"><b>Fast processing</b><span>Uses your device instead of uploading images to a server.</span></div>
+<div class="tile"><b>No registration</b><span>Open the website and start using the tools.</span></div>
+<div class="tile"><b>Free hosting</b><span>Deploy this static website on GitHub Pages or Cloudflare Pages.</span></div>
+</div>
+</main>
+<footer>© <span id="year"></span> PRIYAM IMAGE TOOLS • Free online image utilities</footer>
+<script>
+const $=s=>document.querySelector(s);
+const toolNames={
+compress:["Image Compressor","Compress an image to a target file size or quality."],
+resize:["Image Resizer","Resize by pixels while preserving or changing the aspect ratio."],
+crop:["Image Cropper","Drag on the image to select the exact area you want to crop."],
+convert:["Image Converter","Convert between JPG, PNG and WEBP formats."],
+passport:["Passport Photo Maker","Create a common 35 × 45 mm style photo at print resolution."],
+signature:["Signature Resizer","Prepare a signature image to a chosen pixel size."],
+rotate:["Rotate & Flip","Rotate your image or flip it horizontally or vertically."],
+imgpdf:["Images to PDF","Combine one or more images into a downloadable PDF."],
+pdfimg:["PDF to Images","Render PDF pages as JPG images in your browser."]
+};
+let tool="compress", file=null, img=null, resultBlob=null, resultName="priyam-result", crop=null, cropStart=null, pdfFiles=[];
+const canvas=document.createElement("canvas"),ctx=canvas.getContext("2d");
+$("#year").textContent=new Date().getFullYear();
+function setStatus(s){$("#status").textContent=s}
+function showPreview(node){$("#preview").innerHTML="";$("#preview").append(node)}
+function setImagePreview(image){let p=new Image();p.src=image.src;showPreview(p)}
+function clear(){file=null;img=null;resultBlob=null;pdfFiles=[];crop=null;$("#file").value="";$("#process").disabled=true;$("#download").disabled=true;$("#preview").innerHTML='<span style="color:#87958d">Your preview will appear here</span>';setStatus("Choose a tool and upload a file to get started.");}
+function fields(){
+let html="";
+const f=(label,id,val,type="number",extra="")=>`<div class="field"><label for="${id}">${label}</label><input id="${id}" type="${type}" value="${val}" ${extra}></div>`;
+if(tool==="compress") html=f("Target size (KB)","target",100)+f("Maximum dimension (px, 0 = original)","maxdim",0)+`<div class="field"><label for="fmt">Output format</label><select id="fmt"><option value="image/jpeg">JPG</option><option value="image/webp">WEBP</option><option value="image/png">PNG (size target not guaranteed)</option></select></div>`;
+if(tool==="resize") html=f("Width (px)","width",800)+f("Height (px)","height",800)+`<div class="field"><label><input id="lock" type="checkbox" checked> Keep aspect ratio</label></div>`+`<div class="field"><label for="fmt">Output format</label><select id="fmt"><option value="image/jpeg">JPG</option><option value="image/png">PNG</option><option value="image/webp">WEBP</option></select></div>`;
+if(tool==="crop") html='<div class="field"><label>Crop area</label><span style="color:#65756d;font-size:13px">Upload an image, then drag across the preview to select a crop area.</span></div>';
+if(tool==="convert") html=`<div class="field"><label for="fmt">Convert to</label><select id="fmt"><option value="image/jpeg">JPG</option><option value="image/png">PNG</option><option value="image/webp">WEBP</option></select></div>`;
+if(tool==="passport") html=f("Width (mm)","pwidth",35)+f("Height (mm)","pheight",45)+f("DPI","dpi",300)+`<div class="field"><label for="bg">Background</label><select id="bg"><option value="keep">Keep original</option><option value="#ffffff">White</option></select></div>`;
+if(tool==="signature") html=f("Width (px)","width",300)+f("Height (px)","height",100)+`<div class="field"><label for="fmt">Output format</label><select id="fmt"><option value="image/jpeg">JPG</option><option value="image/png">PNG</option></select></div>`;
+if(tool==="rotate") html=`<div class="field"><label for="angle">Rotation</label><select id="angle"><option value="90">90° clockwise</option><option value="180">180°</option><option value="270">90° counter-clockwise</option></select></div><div class="field"><label for="flip">Flip</label><select id="flip"><option value="none">No flip</option><option value="h">Horizontal</option><option value="v">Vertical</option></select></div>`;
+if(tool==="imgpdf") html=`<div class="field"><label>PDF page size</label><select id="pagesize"><option value="a4">A4</option><option value="letter">Letter</option><option value="fit">Fit image</option></select></div><div class="field"><label>Images</label><span style="font-size:13px;color:#65756d">Select multiple image files using the upload picker.</span></div>`;
+if(tool==="pdfimg") html=`<div class="field"><label for="scale">Render scale</label><select id="scale"><option value="1">Normal</option><option value="1.5" selected>High</option><option value="2">Very high</option></select></div>`;
+$("#controls").innerHTML=html;
+}
+function switchTool(t){tool=t;document.querySelectorAll(".navbtn").forEach(b=>b.classList.toggle("active",b.dataset.tool===t));$("#toolhead").innerHTML=`<h2>${toolNames[t][0]}</h2><p class="sub">${toolNames[t][1]}</p>`;clear();fields();$("#file").accept=t==="pdfimg"?".pdf,application/pdf":"image/*";$("#file").multiple=t==="imgpdf";}
+document.querySelectorAll(".navbtn").forEach(b=>b.onclick=()=>switchTool(b.dataset.tool));
+$("#drop").onclick=e=>{if(e.target.id!=="file")$("#file").click()};
+$("#drop").ondragover=e=>{e.preventDefault();$("#drop").classList.add("drag")};
+$("#drop").ondragleave=()=>$("#drop").classList.remove("drag");
+$("#drop").ondrop=e=>{e.preventDefault();$("#drop").classList.remove("drag");loadFiles(e.dataTransfer.files)};
+$("#file").onchange=e=>loadFiles(e.target.files);
+function loadFiles(files){
+if(!files||!files.length)return;
+if(tool==="imgpdf"){pdfFiles=[...files].filter(f=>f.type.startsWith("image/"));if(!pdfFiles.length){setStatus("Please choose image files.");return}$("#process").disabled=false;$("#preview").innerHTML=`<span>${pdfFiles.length} image(s) selected for PDF.</span>`;setStatus("Ready to create PDF.");return}
+file=files[0];resultBlob=null;$("#download").disabled=true;
+if(tool==="pdfimg"){if(file.type!=="application/pdf"&&!file.name.toLowerCase().endsWith(".pdf")){setStatus("Please choose a PDF file.");return}$("#preview").innerHTML="<span>PDF selected: "+file.name+"</span>";$("#process").disabled=false;setStatus("Ready to render PDF pages.");return}
+if(!file.type.startsWith("image/")){setStatus("Please choose an image file.");return}
+let url=URL.createObjectURL(file);img=new Image();img.onload=()=>{setImagePreview(img);$("#process").disabled=false;setStatus(`${file.name} • ${img.naturalWidth} × ${img.naturalHeight}px • ${(file.size/1024).toFixed(1)} KB`);if(tool==="crop")setupCrop()};img.onerror=()=>setStatus("Could not read this image.");img.src=url;
+}
+function drawImage(targetW,targetH,opts={}){
+canvas.width=targetW;canvas.height=targetH;ctx.clearRect(0,0,targetW,targetH);
+if(opts.bg&&opts.bg!=="keep"){ctx.fillStyle=opts.bg;ctx.fillRect(0,0,targetW,targetH)}
+let angle=opts.angle||0,flip=opts.flip||"none";
+ctx.save();ctx.translate(targetW/2,targetH/2);if(flip==="h")ctx.scale(-1,1);if(flip==="v")ctx.scale(1,-1);
+ctx.drawImage(img,-targetW/2,-targetH/2,targetW,targetH);ctx.restore();
+}
+function toBlob(type,q){return new Promise(resolve=>canvas.toBlob(resolve,type,q))}
+async function output(type,name){resultBlob=await toBlob(type,.92);if(!resultBlob){setStatus("This format is not supported by your browser.");return}resultName=name;$("#download").disabled=false;let u=URL.createObjectURL(resultBlob),im=new Image();im.src=u;showPreview(im);setStatus(`Done • ${(resultBlob.size/1024).toFixed(1)} KB`)}
+async function processImage(){
+if(tool==="pdfimg"){await pdfToImages();return}
+if(tool==="imgpdf"){await imagesToPdf();return}
+if(!img)return;
+try{
+if(tool==="compress"){
+let max=+$("#maxdim").value||0,w=img.naturalWidth,h=img.naturalHeight;if(max&&Math.max(w,h)>max){let s=max/Math.max(w,h);w=Math.round(w*s);h=Math.round(h*s)}
+let type=$("#fmt").value,target=Math.max(1,+$("#target").value||100)*1024,blob=null;
+for(let q=.92;q>=.12;q-=.06){canvas.width=w;canvas.height=h;ctx.drawImage(img,0,0,w,h);blob=await toBlob(type,q);if(blob.size<=target)break}
+if(type==="image/png"||blob.size>target){resultBlob=blob;resultName="priyam-compressed."+ext(type);$("#download").disabled=false;let u=URL.createObjectURL(blob),im2=new Image();im2.src=u;showPreview(im2);setStatus(`Compressed to ${(blob.size/1024).toFixed(1)} KB. ${blob.size>target?"Target size could not be reached without more quality loss.": "Target reached."}`);return}
+resultBlob=blob;resultName="priyam-compressed."+ext(type);$("#download").disabled=false;let u=URL.createObjectURL(blob),im2=new Image();im2.src=u;showPreview(im2);setStatus(`Compressed to ${(blob.size/1024).toFixed(1)} KB.`);return;
+}
+if(tool==="resize"||tool==="signature"){
+let w=Math.max(1,+$("#width").value),h=Math.max(1,+$("#height").value);
+if(tool==="resize"&&$("#lock").checked){let r=img.naturalWidth/img.naturalHeight;if(w/h>r)w=Math.round(h*r);else h=Math.round(w/r)}
+canvas.width=w;canvas.height=h;ctx.drawImage(img,0,0,w,h);await output($("#fmt").value,"priyam-resized."+ext($("#fmt").value));return;
+}
+if(tool==="convert"){canvas.width=img.naturalWidth;canvas.height=img.naturalHeight;ctx.fillStyle="#fff";ctx.fillRect(0,0,canvas.width,canvas.height);ctx.drawImage(img,0,0);await output($("#fmt").value,"priyam-converted."+ext($("#fmt").value));return}
+if(tool==="passport"){
+let dpi=Math.max(72,+$("#dpi").value||300),w=Math.round((+$("#pwidth").value||35)/25.4*dpi),h=Math.round((+$("#pheight").value||45)/25.4*dpi);canvas.width=w;canvas.height=h;if($("#bg").value!=="keep"){ctx.fillStyle=$("#bg").value;ctx.fillRect(0,0,w,h)}ctx.drawImage(img,0,0,w,h);await output("image/jpeg","priyam-passport-photo.jpg");return;
+}
+if(tool==="rotate"){
+let a=+$("#angle").value,swap=a===90||a===270,w=swap?img.naturalHeight:img.naturalWidth,h=swap?img.naturalWidth:img.naturalHeight;canvas.width=w;canvas.height=h;ctx.save();ctx.translate(w/2,h/2);ctx.rotate(a*Math.PI/180);let fl=$("#flip").value;if(fl==="h")ctx.scale(-1,1);if(fl==="v")ctx.scale(1,-1);ctx.drawImage(img,-img.naturalWidth/2,-img.naturalHeight/2);ctx.restore();await output("image/png","priyam-rotated.png");return;
+}
+if(tool==="crop"){if(!crop||crop.w<3||crop.h<3){setStatus("Drag on the image to select a crop area first.");return}canvas.width=crop.w;canvas.height=crop.h;ctx.drawImage(img,crop.x,crop.y,crop.w,crop.h,0,0,crop.w,crop.h);await output("image/png","priyam-cropped.png");return}
+}catch(e){setStatus("Something went wrong: "+e.message)}
+}
+function ext(t){return t==="image/png"?"png":t==="image/webp"?"webp":"jpg"}
+$("#process").onclick=processImage;
+$("#download").onclick=()=>{if(!resultBlob)return;let a=document.createElement("a");a.href=URL.createObjectURL(resultBlob);a.download=resultName;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1500)};
+$("#reset").onclick=clear;
+function setupCrop(){
+let wrap=document.createElement("div");wrap.className="cropwrap";let c=document.createElement("canvas");let scale=Math.min(1,680/img.naturalWidth,390/img.naturalHeight);c.width=Math.round(img.naturalWidth*scale);c.height=Math.round(img.naturalHeight*scale);c.style.width=c.width+"px";c.style.height=c.height+"px";c.getContext("2d").drawImage(img,0,0,c.width,c.height);let box=document.createElement("div");box.className="cropbox hidden";wrap.append(c,box);showPreview(wrap);crop=null;
+let start=null;c.onpointerdown=e=>{let r=c.getBoundingClientRect();start={x:e.clientX-r.left,y:e.clientY-r.top};box.style.left=start.x+"px";box.style.top=start.y+"px";box.style.width="0px";box.style.height="0px";box.classList.remove("hidden");c.setPointerCapture(e.pointerId)};
+c.onpointermove=e=>{if(!start)return;let r=c.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top,l=Math.min(start.x,x),t=Math.min(start.y,y),w=Math.abs(x-start.x),h=Math.abs(y-start.y);Object.assign(box.style,{left:l+"px",top:t+"px",width:w+"px",height:h+"px"})};
+c.onpointerup=e=>{if(!start)return;let r=c.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top,l=Math.min(start.x,x),t=Math.min(start.y,y),w=Math.abs(x-start.x),h=Math.abs(y-start.y),s=img.naturalWidth/c.width;crop={x:Math.round(l*s),y:Math.round(t*s),w:Math.round(w*s),h:Math.round(h*s)};start=null;setStatus(`Selected crop: ${crop.w} × ${crop.h}px. Press Process image.`)};
+}
+async function loadScript(src){return new Promise((res,rej)=>{let s=document.createElement("script");s.src=src;s.onload=res;s.onerror=rej;document.head.append(s)})}
+async function imagesToPdf(){
+try{if(!window.jspdf)await loadScript("https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js");let {jsPDF}=window.jspdf;let size=$("#pagesize").value;let doc=new jsPDF({orientation:"portrait",unit:"mm",format:size==="fit"?"a4":size});for(let i=0;i<pdfFiles.length;i++){let im=new Image(),url=URL.createObjectURL(pdfFiles[i]);await new Promise((r,j)=>{im.onload=r;im.onerror=j;im.src=url});let pw=doc.internal.pageSize.getWidth(),ph=doc.internal.pageSize.getHeight();if(size==="fit"){doc=new jsPDF({orientation:im.width>im.height?"landscape":"portrait",unit:"px",format:[im.width,im.height]});pw=im.width;ph=im.height}else if(i)doc.addPage();let ratio=Math.min(pw/im.width,ph/im.height),w=im.width*ratio,h=im.height*ratio;let c=document.createElement("canvas");c.width=im.width;c.height=im.height;c.getContext("2d").drawImage(im,0,0);doc.addImage(c.toDataURL("JPEG",.92),"JPEG",(pw-w)/2,(ph-h)/2,w,h);URL.revokeObjectURL(url)}doc.save("priyam-images.pdf");setStatus("PDF created and downloaded.");}catch(e){setStatus("PDF creation failed. Check your internet connection and try again. "+e.message)}
+}
+async function pdfToImages(){
+try{if(!window.pdfjsLib)await loadScript("https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js");pdfjsLib.GlobalWorkerOptions.workerSrc="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";let data=await file.arrayBuffer(),pdf=await pdfjsLib.getDocument({data}).promise,scale=+$("#scale").value;setStatus(`Rendering ${pdf.numPages} page(s)…`);for(let n=1;n<=pdf.numPages;n++){let page=await pdf.getPage(n),vp=page.getViewport({scale}),c=document.createElement("canvas");c.width=vp.width;c.height=vp.height;await page.render({canvasContext:c.getContext("2d"),viewport:vp}).promise;let blob=await new Promise(r=>c.toBlob(r,"image/jpeg",.92));let a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=`priyam-page-${n}.jpg`;a.click();await new Promise(r=>setTimeout(r,250))}setStatus(`${pdf.numPages} page(s) rendered. Downloads should appear in your browser.`)}catch(e){setStatus("PDF rendering failed. Check your internet connection and try again. "+e.message)}
+}
+switchTool("compress");
+</script>
+</body></html>
