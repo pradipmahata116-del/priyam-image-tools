@@ -5,18 +5,19 @@
 <meta name="theme-color" content="#075b3b">
 <title>PRIYAM IMAGE TOOLS — Free Online Image & PDF Tools</title>
 <style>
-:root{--green:#087447;--dark:#064b34;--ink:#172b23;--muted:#65756d;--bg:#f4f7f5;--line:#dfe8e2;--white:#fff;--shadow:0 8px 28px #153b2910}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Arial,Helvetica,sans-serif}
-header{background:linear-gradient(120deg,#064b34,#0b8050);color:#fff;padding:22px max(18px,calc((100% - 1160px)/2));}
+:root{--green:#087447;--dark:#064b34;--ink:#172b23;--muted:#65756d;--bg:#eef5f0;--line:#dfe8e2;--white:#fff;--shadow:0 12px 30px #153b2920}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 15% 0%,#e1f5e8 0,transparent 32%),linear-gradient(145deg,#f7faf7,#edf4ef);color:var(--ink);font:15px/1.5 Arial,Helvetica,sans-serif}
+header{background:linear-gradient(120deg,#042f22,#087447 58%,#12a267);color:#fff;padding:22px max(18px,calc((100% - 1160px)/2));box-shadow:0 12px 35px #064b3440;position:relative;overflow:hidden}
 .top{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}.brand{font-size:22px;font-weight:800;letter-spacing:.3px}.brand span{color:#b9f3d3}.tag{font-size:12px;color:#d7f4e5}
-main{max-width:1160px;margin:26px auto;padding:0 18px}.hero{text-align:center;margin:20px auto 28px;max-width:720px}.hero h1{font-size:clamp(27px,5vw,42px);line-height:1.12;margin:0 0 10px}.hero p{color:var(--muted);margin:0}
+main{max-width:1160px;margin:26px auto;padding:0 18px}.hero{text-align:center;margin:20px auto 28px;max-width:760px;padding:28px 18px;border-radius:24px;background:linear-gradient(135deg,#ffffffd9,#e8f7ed);border:1px solid #ffffff;box-shadow:0 18px 35px #16472a18;transform:perspective(900px) rotateX(1deg)}.hero h1{font-size:clamp(27px,5vw,42px);line-height:1.12;margin:0 0 10px}.hero p{color:var(--muted);margin:0}
 .layout{display:grid;grid-template-columns:245px 1fr;gap:20px;align-items:start}
-nav,.workspace,.tool-card{background:var(--white);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}
-nav{padding:12px;position:sticky;top:12px}.nav-title{font-size:11px;color:var(--muted);font-weight:bold;letter-spacing:1px;padding:10px 10px 5px}.navbtn{width:100%;border:0;background:transparent;text-align:left;padding:11px 12px;border-radius:10px;color:#31483c;cursor:pointer;font-size:14px}.navbtn:hover,.navbtn.active{background:#e8f5ed;color:var(--dark);font-weight:bold}
-.workspace{padding:24px;min-height:560px}.workspace h2{margin:0 0 5px;font-size:24px}.sub{color:var(--muted);margin:0 0 20px}.drop{border:2px dashed #a9cdb8;background:#f7fcf8;border-radius:14px;padding:28px 16px;text-align:center;cursor:pointer}.drop.drag{background:#e8f7ed;border-color:var(--green)}.drop strong{display:block;font-size:17px}.drop small{color:var(--muted)}input,select,button{font:inherit}input[type=file]{display:none}.controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:18px 0}.field{display:flex;flex-direction:column;gap:6px}.field label{font-size:13px;font-weight:bold;color:#42564b}.field input:not([type=file]),.field select{width:100%;border:1px solid #cfdcd3;border-radius:9px;padding:10px;background:#fff;color:var(--ink)}.field input[type=range]{padding:0}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.btn{border:0;border-radius:10px;padding:11px 17px;background:var(--green);color:#fff;font-weight:bold;cursor:pointer}.btn:hover{background:var(--dark)}.btn.secondary{background:#e8f1eb;color:var(--dark)}.btn:disabled{opacity:.45;cursor:not-allowed}.preview{margin-top:18px;display:flex;justify-content:center;align-items:center;min-height:130px;background:#f8faf8;border:1px solid var(--line);border-radius:12px;padding:12px;overflow:hidden}.preview img{max-width:100%;max-height:390px;object-fit:contain}.status{margin-top:12px;color:var(--muted);font-size:13px;white-space:pre-wrap}.hidden{display:none!important}.note{background:#fff8e8;border:1px solid #f1dfb2;border-radius:10px;padding:12px;font-size:13px;color:#67532a;margin-top:16px}
+nav,.workspace,.tool-card{background:#ffffffed;border:1px solid #ffffff;border-radius:20px;box-shadow:var(--shadow);backdrop-filter:blur(12px)}
+nav{padding:12px;position:sticky;top:12px}.nav-title{font-size:11px;color:var(--muted);font-weight:bold;letter-spacing:1px;padding:10px 10px 5px}.navbtn{width:100%;border:1px solid transparent;background:transparent;text-align:left;padding:10px 12px;border-radius:13px;color:#31483c;cursor:pointer;font-size:14px;transition:transform .2s,box-shadow .2s,background .2s;display:flex;align-items:center;gap:10px}.navbtn:hover{transform:translateY(-3px);background:#f1faf4;box-shadow:0 8px 16px #0b70401a}.navbtn.active{background:linear-gradient(135deg,#e8f8ee,#d7f2e1);color:var(--dark);font-weight:bold;box-shadow:inset 0 1px #fff,0 5px 12px #0b704018;border-color:#c8ead4}.tool-icon{width:34px;height:34px;display:grid;place-items:center;border-radius:11px;background:linear-gradient(145deg,#fff,#d9f3e2);box-shadow:4px 5px 9px #0b704025,-3px -3px 7px #fff;color:#087447;font-size:18px;flex:none;animation:iconFloat 3s ease-in-out infinite}@keyframes iconFloat{0%,100%{translate:0 0}50%{translate:0 -3px}}
+.workspace{padding:24px;min-height:560px;box-shadow:0 18px 42px #153b2918,inset 0 1px #fff}.workspace h2{margin:0 0 5px;font-size:24px}.sub{color:var(--muted);margin:0 0 20px}.drop{border:2px dashed #a9cdb8;background:#f7fcf8;border-radius:14px;padding:28px 16px;text-align:center;cursor:pointer}.drop.drag{background:#e8f7ed;border-color:var(--green)}.drop strong{display:block;font-size:17px}.drop small{color:var(--muted)}input,select,button{font:inherit}input[type=file]{display:none}.controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:18px 0}.field{display:flex;flex-direction:column;gap:6px}.field label{font-size:13px;font-weight:bold;color:#42564b}.field input:not([type=file]),.field select{width:100%;border:1px solid #cfdcd3;border-radius:9px;padding:10px;background:#fff;color:var(--ink)}.field input[type=range]{padding:0}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.btn{border:0;border-radius:10px;padding:11px 17px;background:var(--green);color:#fff;font-weight:bold;cursor:pointer}.btn:hover{background:var(--dark)}.btn.secondary{background:#e8f1eb;color:var(--dark)}.btn:disabled{opacity:.45;cursor:not-allowed}.preview{margin-top:18px;display:flex;justify-content:center;align-items:center;min-height:130px;background:#f8faf8;border:1px solid var(--line);border-radius:12px;padding:12px;overflow:hidden}.preview img{max-width:100%;max-height:390px;object-fit:contain}.status{margin-top:12px;color:var(--muted);font-size:13px;white-space:pre-wrap}.hidden{display:none!important}.note{background:#fff8e8;border:1px solid #f1dfb2;border-radius:10px;padding:12px;font-size:13px;color:#67532a;margin-top:16px}
 canvas{max-width:100%;touch-action:none;cursor:crosshair}.cropwrap{position:relative;display:inline-block;max-width:100%;line-height:0}.cropwrap canvas{display:block}.cropbox{position:absolute;border:2px dashed #00a85a;background:#00a85a22;pointer-events:none}
-.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}.tile{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}.tile b{display:block;margin-bottom:4px}.tile span{font-size:12px;color:var(--muted)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}.tile{background:linear-gradient(145deg,#fff,#f0f8f2);border:1px solid #fff;border-radius:16px;padding:18px;box-shadow:7px 8px 18px #153b2914,-4px -4px 12px #fff;transition:transform .2s}.tile:hover{transform:translateY(-5px)}.tile b{display:block;margin-bottom:4px}.tile span{font-size:12px;color:var(--muted)}
 footer{text-align:center;padding:28px;color:var(--muted);font-size:12px}
+@media(max-width:900px){.tiles{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:760px){.layout{grid-template-columns:1fr}nav{position:static;display:grid;grid-template-columns:repeat(2,1fr);gap:3px}.nav-title{grid-column:1/-1}.workspace{padding:18px}.tiles{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:430px){.controls{grid-template-columns:1fr}.tiles{grid-template-columns:1fr}.brand{font-size:19px}}
 </style>
@@ -28,16 +29,18 @@ footer{text-align:center;padding:28px;color:var(--muted);font-size:12px}
 <div class="layout">
 <nav aria-label="Tools">
 <div class="nav-title">IMAGE TOOLS</div>
-<button class="navbtn active" data-tool="compress">🗜️ Image Compressor</button>
-<button class="navbtn" data-tool="resize">↔️ Image Resizer</button>
-<button class="navbtn" data-tool="crop">✂️ Image Cropper</button>
-<button class="navbtn" data-tool="convert">🔄 Image Converter</button>
-<button class="navbtn" data-tool="passport">🪪 Passport Photo</button>
-<button class="navbtn" data-tool="signature">✍️ Signature Resizer</button>
-<button class="navbtn" data-tool="rotate">⤾ Rotate & Flip</button>
+<button class="navbtn active" data-tool="compress"><span class="tool-icon">🗜️</span> Image Compressor</button>
+<button class="navbtn" data-tool="resize"><span class="tool-icon">↔️</span> Image Resizer</button>
+<button class="navbtn" data-tool="crop"><span class="tool-icon">✂️</span> Image Cropper</button>
+<button class="navbtn" data-tool="convert"><span class="tool-icon">🔄</span> Image Converter</button>
+<button class="navbtn" data-tool="passport"><span class="tool-icon">🪪</span> Passport Photo</button>
+<button class="navbtn" data-tool="pvc"><span class="tool-icon">🖨️</span> PVC Photo Auto-Crop</button>
+<button class="navbtn" data-tool="govt"><span class="tool-icon">🏛️</span> Govt. Photo Prep</button>
+<button class="navbtn" data-tool="signature"><span class="tool-icon">✍️</span> Signature Resizer</button>
+<button class="navbtn" data-tool="rotate"><span class="tool-icon">⤾</span> Rotate & Flip</button>
 <div class="nav-title">PDF TOOLS</div>
-<button class="navbtn" data-tool="imgpdf">📄 Images to PDF</button>
-<button class="navbtn" data-tool="pdfimg">🖼️ PDF to Images</button>
+<button class="navbtn" data-tool="imgpdf"><span class="tool-icon">📄</span> Images to PDF</button>
+<button class="navbtn" data-tool="pdfimg"><span class="tool-icon">🖼️</span> PDF to Images</button>
 </nav>
 <section class="workspace">
 <div id="toolhead"><h2>Image Compressor</h2><p class="sub">Reduce image file size while keeping the best possible quality.</p></div>
@@ -50,6 +53,7 @@ footer{text-align:center;padding:28px;color:var(--muted);font-size:12px}
 </section>
 </div>
 <div class="tiles">
+<div class="tile"><b>3D-style workspace</b><span>Animated icons and layered cards help you find tools quickly.</span></div>
 <div class="tile"><b>Fast processing</b><span>Uses your device instead of uploading images to a server.</span></div>
 <div class="tile"><b>No registration</b><span>Open the website and start using the tools.</span></div>
 <div class="tile"><b>Free hosting</b><span>Deploy this static website on GitHub Pages or Cloudflare Pages.</span></div>
@@ -66,6 +70,8 @@ convert:["Image Converter","Convert between JPG, PNG and WEBP formats."],
 passport:["Passport Photo Maker","Create a common 35 × 45 mm style photo at print resolution."],
 signature:["Signature Resizer","Prepare a signature image to a chosen pixel size."],
 rotate:["Rotate & Flip","Rotate your image or flip it horizontally or vertically."],
+pvc:["PVC Photo Auto-Crop","Create a print-ready sheet of repeated ID photos with automatic center cropping."],
+govt:["Government Photo Prep","Prepare a photo or signature for common online form uploads. Verify the exact portal requirements before use."],
 imgpdf:["Images to PDF","Combine one or more images into a downloadable PDF."],
 pdfimg:["PDF to Images","Render PDF pages as JPG images in your browser."]
 };
@@ -85,10 +91,26 @@ if(tool==="crop") html='<div class="field"><label>Crop area</label><span style="
 if(tool==="convert") html=`<div class="field"><label for="fmt">Convert to</label><select id="fmt"><option value="image/jpeg">JPG</option><option value="image/png">PNG</option><option value="image/webp">WEBP</option></select></div>`;
 if(tool==="passport") html=f("Width (mm)","pwidth",35)+f("Height (mm)","pheight",45)+f("DPI","dpi",300)+`<div class="field"><label for="bg">Background</label><select id="bg"><option value="keep">Keep original</option><option value="#ffffff">White</option></select></div>`;
 if(tool==="signature") html=f("Width (px)","width",300)+f("Height (px)","height",100)+`<div class="field"><label for="fmt">Output format</label><select id="fmt"><option value="image/jpeg">JPG</option><option value="image/png">PNG</option></select></div>`;
+if(tool==="pvc") html=`<div class="field"><label for="pvcsize">Photo size</label><select id="pvcsize"><option value="35x45">35 × 45 mm</option><option value="2x2">2 × 2 inch</option><option value="25x35">25 × 35 mm</option><option value="custom">Custom size</option></select></div>`+
+f("Custom width (mm)","pvcw",35)+f("Custom height (mm)","pvch",45)+
+`<div class="field"><label for="sheet">Print sheet</label><select id="sheet"><option value="4x6">4 × 6 inch photo paper</option><option value="5x7">5 × 7 inch photo paper</option><option value="a4">A4 paper</option></select></div>`+
+f("Copies","copies",8)+f("DPI","pvcDpi",300)+f("Gap between photos (mm)","gapmm",2);
+if(tool==="govt") html=`<div class="field"><label for="govpreset">Form / service preset</label><select id="govpreset"><option value="custom">Custom dimensions</option><option value="passport">Passport-style photo (35 × 45 mm starting size)</option><option value="pan">Square photo (2 × 2 inch starting size)</option><option value="signature">Signature image</option></select></div>`+
+f("Width (px)","width",413)+f("Height (px)","height",531)+f("Maximum file size (KB)","target",100)+
+`<div class="field"><label for="govfmt">Output</label><select id="govfmt"><option value="image/jpeg">JPG</option><option value="image/png">PNG</option></select></div>
+<div class="field"><label><input id="govcrop" type="checkbox" checked> Auto crop to fit (center crop)</label></div>`;
 if(tool==="rotate") html=`<div class="field"><label for="angle">Rotation</label><select id="angle"><option value="90">90° clockwise</option><option value="180">180°</option><option value="270">90° counter-clockwise</option></select></div><div class="field"><label for="flip">Flip</label><select id="flip"><option value="none">No flip</option><option value="h">Horizontal</option><option value="v">Vertical</option></select></div>`;
 if(tool==="imgpdf") html=`<div class="field"><label>PDF page size</label><select id="pagesize"><option value="a4">A4</option><option value="letter">Letter</option><option value="fit">Fit image</option></select></div><div class="field"><label>Images</label><span style="font-size:13px;color:#65756d">Select multiple image files using the upload picker.</span></div>`;
 if(tool==="pdfimg") html=`<div class="field"><label for="scale">Render scale</label><select id="scale"><option value="1">Normal</option><option value="1.5" selected>High</option><option value="2">Very high</option></select></div>`;
 $("#controls").innerHTML=html;
+if(tool==="govt"){
+ $("#govpreset").onchange=()=>{
+  const v=$("#govpreset").value;
+  if(v==="passport"){ $("#width").value=413; $("#height").value=531; }
+  else if(v==="pan"){ $("#width").value=600; $("#height").value=600; }
+  else if(v==="signature"){ $("#width").value=300; $("#height").value=100; }
+ };
+}
 }
 function switchTool(t){tool=t;document.querySelectorAll(".navbtn").forEach(b=>b.classList.toggle("active",b.dataset.tool===t));$("#toolhead").innerHTML=`<h2>${toolNames[t][0]}</h2><p class="sub">${toolNames[t][1]}</p>`;clear();fields();$("#file").accept=t==="pdfimg"?".pdf,application/pdf":"image/*";$("#file").multiple=t==="imgpdf";}
 document.querySelectorAll(".navbtn").forEach(b=>b.onclick=()=>switchTool(b.dataset.tool));
@@ -114,6 +136,13 @@ ctx.drawImage(img,-targetW/2,-targetH/2,targetW,targetH);ctx.restore();
 }
 function toBlob(type,q){return new Promise(resolve=>canvas.toBlob(resolve,type,q))}
 async function output(type,name){resultBlob=await toBlob(type,.92);if(!resultBlob){setStatus("This format is not supported by your browser.");return}resultName=name;$("#download").disabled=false;let u=URL.createObjectURL(resultBlob),im=new Image();im.src=u;showPreview(im);setStatus(`Done • ${(resultBlob.size/1024).toFixed(1)} KB`)}
+function drawCover(source,w,h){
+ const tr=w/h,sr=source.naturalWidth/source.naturalHeight;
+ let sx=0,sy=0,sw=source.naturalWidth,sh=source.naturalHeight;
+ if(sr>tr){sw=source.naturalHeight*tr;sx=(source.naturalWidth-sw)/2;}
+ else{sh=source.naturalWidth/tr;sy=(source.naturalHeight-sh)/2;}
+ ctx.drawImage(source,sx,sy,sw,sh,0,0,w,h);
+}
 async function processImage(){
 if(tool==="pdfimg"){await pdfToImages();return}
 if(tool==="imgpdf"){await imagesToPdf();return}
@@ -137,6 +166,28 @@ let dpi=Math.max(72,+$("#dpi").value||300),w=Math.round((+$("#pwidth").value||35
 }
 if(tool==="rotate"){
 let a=+$("#angle").value,swap=a===90||a===270,w=swap?img.naturalHeight:img.naturalWidth,h=swap?img.naturalWidth:img.naturalHeight;canvas.width=w;canvas.height=h;ctx.save();ctx.translate(w/2,h/2);ctx.rotate(a*Math.PI/180);let fl=$("#flip").value;if(fl==="h")ctx.scale(-1,1);if(fl==="v")ctx.scale(1,-1);ctx.drawImage(img,-img.naturalWidth/2,-img.naturalHeight/2);ctx.restore();await output("image/png","priyam-rotated.png");return;
+}
+if(tool==="pvc"){
+ let dpi=Math.max(72,+$("#pvcDpi").value||300),pw=35,ph=45,size=$("#pvcsize").value;
+ if(size==="2x2"){pw=50.8;ph=50.8}else if(size==="25x35"){pw=25;ph=35}else if(size==="custom"){pw=Math.max(5,+$("#pvcw").value||35);ph=Math.max(5,+$("#pvch").value||45)}
+ let sw,sh;const sheet=$("#sheet").value;
+ if(sheet==="4x6"){sw=101.6;sh=152.4}else if(sheet==="5x7"){sw=127;sh=177.8}else{sw=210;sh=297}
+ const gap=Math.max(0,+$("#gapmm").value||0),cols=Math.max(1,Math.floor((sw+gap)/(pw+gap))),rows=Math.max(1,Math.floor((sh+gap)/(ph+gap)));
+ const count=Math.min(Math.max(1,+$("#copies").value||1),cols*rows);
+ canvas.width=Math.round(sw/25.4*dpi);canvas.height=Math.round(sh/25.4*dpi);
+ ctx.fillStyle="#fff";ctx.fillRect(0,0,canvas.width,canvas.height);
+ const photoW=Math.round(pw/25.4*dpi),photoH=Math.round(ph/25.4*dpi),gapPx=Math.round(gap/25.4*dpi);
+ const totalW=cols*photoW+(cols-1)*gapPx,totalH=rows*photoH+(rows-1)*gapPx;
+ const ox=Math.round((canvas.width-totalW)/2),oy=Math.round((canvas.height-totalH)/2);
+ for(let i=0;i<count;i++){const col=i%cols,row=Math.floor(i/cols),x=ox+col*(photoW+gapPx),y=oy+row*(photoH+gapPx);const tr=pw/ph,sr=img.naturalWidth/img.naturalHeight;let sx=0,sy=0,sw0=img.naturalWidth,sh0=img.naturalHeight;if(sr>tr){sw0=img.naturalHeight*tr;sx=(img.naturalWidth-sw0)/2}else{sh0=img.naturalWidth/tr;sy=(img.naturalHeight-sh0)/2}ctx.drawImage(img,sx,sy,sw0,sh0,x,y,photoW,photoH);ctx.strokeStyle="#d8d8d8";ctx.lineWidth=2;ctx.strokeRect(x,y,photoW,photoH)}
+ await output("image/jpeg","priyam-pvc-photo-sheet.jpg");setStatus(`Created ${count} center-cropped photo(s) on ${sheet.toUpperCase()} paper at ${dpi} DPI. Check framing before printing.`);return;
+}
+if(tool==="govt"){
+ let w=Math.max(1,+$("#width").value||413),h=Math.max(1,+$("#height").value||531),type=$("#govfmt").value,target=Math.max(1,+$("#target").value||100)*1024;
+ canvas.width=w;canvas.height=h;if($("#govcrop").checked)drawCover(img,w,h);else ctx.drawImage(img,0,0,w,h);
+ let blob=null;if(type==="image/png"){blob=await toBlob(type);resultName="priyam-government-photo.png"}else{for(let q=.92;q>=.12;q-=.06){blob=await toBlob(type,q);if(blob.size<=target)break}resultName="priyam-government-photo.jpg"}
+ resultBlob=blob;$("#download").disabled=false;const u=URL.createObjectURL(blob),out=new Image();out.src=u;showPreview(out);
+ setStatus(`Prepared ${w} × ${h}px • ${(blob.size/1024).toFixed(1)} KB. This is a preparation helper, not an official approval. Verify current portal dimensions, file-size and background rules.`);return;
 }
 if(tool==="crop"){if(!crop||crop.w<3||crop.h<3){setStatus("Drag on the image to select a crop area first.");return}canvas.width=crop.w;canvas.height=crop.h;ctx.drawImage(img,crop.x,crop.y,crop.w,crop.h,0,0,crop.w,crop.h);await output("image/png","priyam-cropped.png");return}
 }catch(e){setStatus("Something went wrong: "+e.message)}
